@@ -10,6 +10,26 @@ $primary-font: 2.3rem;
 $secondary-font: 2rem;
 $tertiary-font: 1.8rem;
 
+// Global functions
+
+@mixin flex($direction, $justify) {
+  display: -webkit-box; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */
+  display: -moz-box; /* Firefox 2-21 */
+  display: -ms-flexbox; /* Internet explorer 10 */
+  display: -webkit-flex; /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -webkit-box-align: $direction;
+  -moz-align-items: $direction;
+  -ms-align-items: $direction;
+  -webkit-align-items: $direction;
+  align-items: $direction;
+  -webkit-box-pack: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  -webkit-justify-content: $justify;
+  justify-content: $justify;
+}
+
 * {
   margin: 0;
   padding: 0;
