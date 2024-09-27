@@ -64,7 +64,7 @@ h3 {
 nav {
   width: 90%;
   margin: auto;
-  min-height: 10vh;
+  min-height: 12vh;
   @include flex(center, space-between);
   .logo {
     flex-grow: 4.5;
