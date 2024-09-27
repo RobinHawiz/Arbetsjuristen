@@ -10,3 +10,44 @@
     url("/img/LandingPage.jpg");
   background-size: cover;
 }
+
+button {
+  position: relative;
+  background: none;
+  border: none;
+  width: 15rem;
+  height: 5rem;
+
+  .border-line {
+    position: absolute;
+    background: $primary;
+  }
+
+  .border-line.top-right-vertical {
+    top: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.top-right-horizontal {
+    top: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
+  .border-line.bottom-right-vertical {
+    bottom: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.bottom-right-horizontal {
+    bottom: 0;
+    right: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
+  p {
+    font-size: $tertiary-font;
+  }
+}
