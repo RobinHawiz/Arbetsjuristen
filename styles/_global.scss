@@ -51,14 +51,21 @@ body {
 
 h1 {
   font-size: $h1-font;
+  color: $primary;
 }
 
 h2 {
   font-size: $h2-font;
+  color: $primary;
 }
 
 h3 {
   font-size: $h3-font;
+  color: $primary;
+}
+
+p {
+  color: $primary;
 }
 
 nav {
