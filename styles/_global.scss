@@ -49,6 +49,18 @@ body {
   font-style: normal;
 }
 
+h1 {
+  font-size: $h1-font;
+}
+
+h2 {
+  font-size: $h2-font;
+}
+
+h3 {
+  font-size: $h3-font;
+}
+
 nav {
   width: 90%;
   margin: auto;
