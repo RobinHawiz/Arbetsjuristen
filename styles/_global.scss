@@ -48,3 +48,22 @@ body {
   font-weight: bold;
   font-style: normal;
 }
+
+nav {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  @include flex(center, space-between);
+  .logo {
+    flex-grow: 4.5;
+  }
+  ul {
+    flex-grow: 1;
+    @include flex(center, space-between);
+    a {
+      color: $primary;
+      font-size: $secondary-font;
+      font-weight: 400;
+    }
+  }
+}
