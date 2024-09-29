@@ -109,3 +109,22 @@ nav {
     }
   }
 }
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+    .logo {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    ul {
+      flex-basis: 60rem;
+      flex-wrap: wrap;
+      li {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}

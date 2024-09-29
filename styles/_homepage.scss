@@ -106,13 +106,81 @@ button {
     width: 100%;
     @include flex(center, center, column);
     .info-content-container-services {
-      width: 56rem;
+      width: calc(30rem + 20vw);
       h2 {
-        margin-bottom: 5rem;
+        margin-bottom: calc(2rem + 1vw);
       }
       .labour-and-negotiations-container {
-        @include flex(center, space-between, row);
+        @include flex(normal, space-between, row);
         line-height: 2.7rem;
+        li {
+          margin-left: 2.5rem;
+          list-style-type: disc;
+          color: $primary;
+          line-height: 3.5rem;
+          font-size: $tertiary-font;
+        }
+        p {
+          font-size: $primary-font;
+        }
+
+        .read-more {
+          width: 10rem;
+          a {
+            @include flex(center, space-between, row);
+            p {
+              font-size: $tertiary-font;
+              color: $link;
+            }
+
+            img {
+              transition: all ease 0.3s;
+              width: 2.4rem;
+              height: 2.4rem;
+            }
+
+            &:hover {
+              img {
+                transform: translate(1rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .image-wrapper-worker {
+    height: 100%;
+    width: 100%;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+/* ---------------------------services-for-employers--------------------------- */
+
+.services-for-employers {
+  background-color: $secondary;
+  min-height: 120vh;
+  @include flex(center, space-between, row);
+  .info-container-services {
+    width: 100%;
+    @include flex(center, center, column);
+    .info-content-container-services {
+      width: calc(30rem + 20vw);
+      h2 {
+        margin-bottom: 2rem;
+      }
+      .labour-and-negotiations-container > * {
+        margin-top: 1.4vw;
+        margin-bottom: 1.4vw;
+      }
+      .labour-and-negotiations-container {
+        line-height: 2.7rem;
+        @include flex(normal, space-between, column);
         li {
           margin-left: 2.5rem;
           list-style-type: disc;
@@ -150,13 +218,123 @@ button {
       }
     }
   }
-  .image-wrapper-worker {
+  .image-wrapper-employer {
     height: 100%;
     width: 100%;
     img {
       height: 100%;
       width: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+@media screen and (max-width: 1365px) {
+  .services-for-workers {
+    flex-wrap: wrap-reverse;
+    .info-container-services {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+    .image-wrapper-worker {
+      height: 50vh;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: 50% 10%;
+      }
+    }
+  }
+
+  .services-for-employers {
+    flex-wrap: wrap;
+    .info-container-services {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      .labour-and-negotiations-container {
+        height: 100%;
+      }
+    }
+    .image-wrapper-employer {
+      height: 50vh;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .homepage {
+    .info-container {
+      h2 {
+        text-align: center;
+      }
+      .text-wrapper {
+        width: 90%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .services-for-workers {
+    h2 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      text-align: center;
+    }
+    .info-container-services {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      .info-content-container-services {
+        width: 90%;
+        .labour-and-negotiations-container {
+          flex-wrap: wrap;
+          .labour-law-container {
+            margin-bottom: 3rem;
+          }
+        }
+        .labour-and-negotiations-container > * {
+          margin-left: 2rem;
+          flex-basis: 50rem;
+        }
+      }
+    }
+  }
+
+  .services-for-employers {
+    flex-wrap: wrap;
+    h2 {
+      text-align: center;
+    }
+    .info-container-services {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      .info-content-container-services {
+        width: 90%;
+        .labour-and-negotiations-container {
+          height: 100%;
+        }
+        .labour-and-negotiations-container > * {
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+    .image-wrapper-employer {
+      height: 50vh;
+      width: 100%;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 }

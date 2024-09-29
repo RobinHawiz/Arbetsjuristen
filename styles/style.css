@@ -88,6 +88,24 @@ nav ul li a {
   font-weight: 400;
 }
 
+@media screen and (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  nav .logo {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  nav ul {
+    flex-basis: 60rem;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+}
 .homepage {
   min-height: 100vh;
   background: #2f303a; /* fallback */
@@ -210,16 +228,16 @@ button:hover .border-line.bottom-right-horizontal {
   flex-direction: column;
 }
 .services-for-workers .info-container-services .info-content-container-services {
-  width: 56rem;
+  width: calc(30rem + 20vw);
 }
 .services-for-workers .info-container-services .info-content-container-services h2 {
-  margin-bottom: 5rem;
+  margin-bottom: calc(2rem + 1vw);
 }
 .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
   display: flex;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
@@ -261,7 +279,6 @@ button:hover .border-line.bottom-right-horizontal {
   transition: all ease 0.3s;
   width: 2.4rem;
   height: 2.4rem;
-  filter: #688bf5;
 }
 .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a:hover img {
   transform: translate(1rem);
@@ -275,4 +292,208 @@ button:hover .border-line.bottom-right-horizontal {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* ---------------------------services-for-employers--------------------------- */
+.services-for-employers {
+  background-color: #2f303a;
+  min-height: 120vh; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-employers .info-container-services {
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.services-for-employers .info-container-services .info-content-container-services {
+  width: calc(30rem + 20vw);
+}
+.services-for-employers .info-container-services .info-content-container-services h2 {
+  margin-bottom: 2rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
+  margin-top: 1.4vw;
+  margin-bottom: 1.4vw;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container {
+  line-height: 2.7rem; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container li {
+  margin-left: 2.5rem;
+  list-style-type: disc;
+  color: #ece8e5;
+  line-height: 3.5rem;
+  font-size: 1.8rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container p {
+  font-size: 2.3rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more {
+  width: 10rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a p {
+  font-size: 1.8rem;
+  color: #688bf5;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a img {
+  transition: all ease 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+  filter: #688bf5;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a:hover img {
+  transform: translate(1rem);
+}
+.services-for-employers .image-wrapper-employer {
+  height: 100%;
+  width: 100%;
+}
+.services-for-employers .image-wrapper-employer img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media screen and (max-width: 1365px) {
+  .services-for-workers {
+    flex-wrap: wrap-reverse;
+  }
+  .services-for-workers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-workers .image-wrapper-worker {
+    height: 50vh;
+    width: 100%;
+  }
+  .services-for-workers .image-wrapper-worker img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 10%;
+       object-position: 50% 10%;
+  }
+  .services-for-employers {
+    flex-wrap: wrap;
+  }
+  .services-for-employers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-employers .info-container-services .labour-and-negotiations-container {
+    height: 100%;
+  }
+  .services-for-employers .image-wrapper-employer {
+    height: 50vh;
+    width: 100%;
+  }
+  .services-for-employers .image-wrapper-employer img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 800px) {
+  .homepage .info-container h2 {
+    text-align: center;
+  }
+  .homepage .info-container .text-wrapper {
+    width: 90%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .services-for-workers h2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+  }
+  .services-for-workers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-workers .info-container-services .info-content-container-services {
+    width: 90%;
+  }
+  .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container {
+    flex-wrap: wrap;
+  }
+  .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .labour-law-container {
+    margin-bottom: 3rem;
+  }
+  .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
+    margin-left: 2rem;
+    flex-basis: 50rem;
+  }
+  .services-for-employers {
+    flex-wrap: wrap;
+  }
+  .services-for-employers h2 {
+    text-align: center;
+  }
+  .services-for-employers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-employers .info-container-services .info-content-container-services {
+    width: 90%;
+  }
+  .services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container {
+    height: 100%;
+  }
+  .services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .services-for-employers .image-wrapper-employer {
+    height: 50vh;
+    width: 100%;
+  }
+  .services-for-employers .image-wrapper-employer img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }/*# sourceMappingURL=style.css.map */
