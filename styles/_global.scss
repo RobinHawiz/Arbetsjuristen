@@ -86,10 +86,26 @@ nav {
     flex-grow: 1;
     @include flex(center, space-between, row);
     -webkit-box-orient: horizontal; /* Internet explorer 10 (column = vertical, row = horizontal)*/
-    a {
-      color: $primary;
-      font-size: $secondary-font;
-      font-weight: 400;
+    li {
+      position: relative;
+      .border-link {
+        position: absolute;
+        bottom: 0;
+        transition: all ease 0.2s;
+        background: $primary;
+        width: 0rem;
+        height: 0.2rem;
+      }
+      &:hover {
+        .border-link {
+          width: 100%;
+        }
+      }
+      a {
+        color: $primary;
+        font-size: $secondary-font;
+        font-weight: 400;
+      }
     }
   }
 }
