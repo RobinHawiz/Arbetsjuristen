@@ -48,6 +48,9 @@ nav {
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row; /* Internet explorer 10 (column = vertical, row = horizontal)*/
 }
 nav .logo {
   flex-grow: 4.5;
@@ -61,8 +64,25 @@ nav ul {
   -moz-justify-content: space-between;
   -ms-justify-content: space-between;
   justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row; /* Internet explorer 10 (column = vertical, row = horizontal)*/
 }
-nav ul a {
+nav ul li {
+  position: relative;
+}
+nav ul li .border-link {
+  position: absolute;
+  bottom: 0;
+  transition: all ease 0.2s;
+  background: #ece8e5;
+  width: 0rem;
+  height: 0.2rem;
+}
+nav ul li:hover .border-link {
+  width: 100%;
+}
+nav ul li a {
   color: #ece8e5;
   font-size: 2rem;
   font-weight: 400;
@@ -74,6 +94,7 @@ nav ul a {
   background-image: url("/img/LandingPage.jpg"); /* fallback */
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), url("/img/LandingPage.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .info-container {
@@ -86,7 +107,9 @@ nav ul a {
   -moz-justify-content: center;
   -ms-justify-content: center;
   justify-content: center;
-  flex-direction: column;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column; /* Internet explorer 10 (column = vertical, row = horizontal)*/
 }
 .info-container .text-wrapper {
   margin-top: 5rem;
@@ -102,12 +125,14 @@ button {
   position: relative;
   background: none;
   border: none;
+  cursor: pointer;
   width: 15rem;
   height: 5rem;
 }
 button .border-line {
   position: absolute;
   background: #ece8e5;
+  transition: all ease 0.3s;
 }
 button .border-line.top-right-vertical {
   top: 0;
@@ -133,4 +158,121 @@ button .border-line.bottom-right-horizontal {
 }
 button p {
   font-size: 1.8rem;
+}
+button:hover .border-line.top-right-vertical {
+  width: 0.2rem;
+  height: 5rem;
+}
+button:hover .border-line.top-right-horizontal {
+  top: 0;
+  width: 15rem;
+  height: 0.2rem;
+}
+button:hover .border-line.bottom-right-vertical {
+  bottom: 0;
+  right: 0;
+  width: 0.2rem;
+  height: 5rem;
+}
+button:hover .border-line.bottom-right-horizontal {
+  bottom: 0;
+  right: 0;
+  width: 15rem;
+  height: 0.2rem;
+}
+
+/* ---------------------------services-for-workers--------------------------- */
+.services-for-workers {
+  background-color: #2f303a;
+  min-height: 70vh; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-workers .info-container-services {
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.services-for-workers .info-container-services .info-content-container-services {
+  width: 56rem;
+}
+.services-for-workers .info-container-services .info-content-container-services h2 {
+  margin-bottom: 5rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  line-height: 2.7rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container li {
+  margin-left: 2.5rem;
+  list-style-type: disc;
+  color: #ece8e5;
+  line-height: 3.5rem;
+  font-size: 1.8rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container p {
+  font-size: 2.3rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more {
+  width: 10rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a p {
+  font-size: 1.8rem;
+  color: #688bf5;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a img {
+  transition: all ease 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+  filter: #688bf5;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a:hover img {
+  transform: translate(1rem);
+}
+.services-for-workers .image-wrapper-worker {
+  height: 100%;
+  width: 100%;
+}
+.services-for-workers .image-wrapper-worker img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }/*# sourceMappingURL=style.css.map */
