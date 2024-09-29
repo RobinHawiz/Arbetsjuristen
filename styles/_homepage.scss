@@ -123,6 +123,30 @@ button {
         p {
           font-size: $primary-font;
         }
+
+        .read-more {
+          width: 10rem;
+          a {
+            @include flex(center, space-between, row);
+            p {
+              font-size: $tertiary-font;
+              color: $link;
+            }
+
+            img {
+              transition: all ease 0.3s;
+              width: 2.4rem;
+              height: 2.4rem;
+              filter: $link;
+            }
+
+            &:hover {
+              img {
+                transform: translate(1rem);
+              }
+            }
+          }
+        }
       }
     }
   }
