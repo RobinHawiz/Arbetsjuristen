@@ -95,3 +95,35 @@ button {
     }
   }
 }
+
+/* ---------------------------services-for-workers--------------------------- */
+
+.services-for-workers {
+  background-color: $secondary;
+  min-height: 70vh;
+  @include flex(center, space-between, row);
+  .info-container-services {
+    width: 100%;
+    @include flex(center, center, column);
+    .info-content-container-services {
+      width: 56rem;
+      h2 {
+        margin-bottom: 5rem;
+      }
+      .labour-and-negotiations-container {
+        @include flex(center, space-between, row);
+        line-height: 2.7rem;
+        li {
+          margin-left: 2.5rem;
+          list-style-type: disc;
+          color: $primary;
+          line-height: 3.5rem;
+          font-size: $tertiary-font;
+        }
+        p {
+          font-size: $primary-font;
+        }
+      }
+    }
+  }
+}
