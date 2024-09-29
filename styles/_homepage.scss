@@ -15,8 +15,8 @@
 .info-container {
   min-height: 82vh;
   width: 100%;
-  @include flex(center, center);
-  flex-direction: column;
+  @include flex(center, center, column);
+  -webkit-box-orient: vertical; /* Internet explorer 10 (column = vertical, row = horizontal)*/
   .text-wrapper {
     margin-top: 5rem;
     margin-bottom: 5rem;

@@ -12,22 +12,27 @@ $tertiary-font: 1.8rem;
 
 // Global functions
 
-@mixin flex($direction, $justify) {
+@mixin flex($align, $justify, $direction) {
   display: -webkit-box; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */
   display: -moz-box; /* Firefox 2-21 */
   display: -ms-flexbox; /* Internet explorer 10 */
   display: -webkit-flex; /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
   display: flex;
-  -webkit-box-align: $direction;
-  -moz-align-items: $direction;
-  -ms-align-items: $direction;
-  -webkit-align-items: $direction;
-  align-items: $direction;
+  -webkit-box-align: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  -webkit-align-items: $align;
+  align-items: $align;
   -webkit-box-pack: $justify;
   -moz-justify-content: $justify;
   -ms-justify-content: $justify;
   -webkit-justify-content: $justify;
   justify-content: $justify;
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  -o-flex-direction: $direction;
+  flex-direction: $direction;
 }
 
 * {
@@ -72,13 +77,15 @@ nav {
   width: 90%;
   margin: auto;
   min-height: 12vh;
-  @include flex(center, space-between);
+  @include flex(center, space-between, row);
+  -webkit-box-orient: horizontal; /* Internet explorer 10 (column = vertical, row = horizontal)*/
   .logo {
     flex-grow: 4.5;
   }
   ul {
     flex-grow: 1;
-    @include flex(center, space-between);
+    @include flex(center, space-between, row);
+    -webkit-box-orient: horizontal; /* Internet explorer 10 (column = vertical, row = horizontal)*/
     a {
       color: $primary;
       font-size: $secondary-font;
