@@ -31,12 +31,14 @@ button {
   position: relative;
   background: none;
   border: none;
+  cursor: pointer;
   width: 15rem;
   height: 5rem;
 
   .border-line {
     position: absolute;
     background: $primary;
+    transition: all ease 0.5s;
   }
 
   .border-line.top-right-vertical {
@@ -65,5 +67,30 @@ button {
 
   p {
     font-size: $tertiary-font;
+  }
+
+  &:hover {
+    .border-line.top-right-vertical {
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.top-right-horizontal {
+      top: 0;
+      width: 15rem;
+      height: 0.2rem;
+    }
+
+    .border-line.bottom-right-vertical {
+      bottom: 0;
+      right: 0;
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.bottom-right-horizontal {
+      bottom: 0;
+      right: 0;
+      width: 15rem;
+      height: 0.2rem;
+    }
   }
 }
