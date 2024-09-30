@@ -122,10 +122,6 @@ footer {
     .company-information-container {
       @include flex(normal, center, column);
       flex-grow: 1.5;
-      .copyright-logo-wrapper {
-        img {
-        }
-      }
       .contact-info-container {
         width: 100%;
         @include flex(center, normal, row);
