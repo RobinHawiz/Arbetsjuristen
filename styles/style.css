@@ -513,13 +513,4 @@ button:hover .border-line.bottom-right-horizontal {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
-  .services-for-employers .image-wrapper-employer {
-    width: 100%;
-  }
-  .services-for-employers .image-wrapper-employer img {
-    height: 100%;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }/*# sourceMappingURL=style.css.map */
