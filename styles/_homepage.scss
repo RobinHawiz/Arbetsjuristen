@@ -150,8 +150,18 @@ button {
     }
   }
   .image-wrapper-worker {
+    position: relative;
     height: 100%;
     width: 100%;
+    .services-wrapper {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5rem;
+      background: rgb(47, 48, 58, 0.8);
+    }
     img {
       height: 100%;
       width: 100%;
@@ -219,8 +229,18 @@ button {
     }
   }
   .image-wrapper-employer {
+    position: relative;
     height: 100%;
     width: 100%;
+    .services-wrapper {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5rem;
+      background: rgb(47, 48, 58, 0.8);
+    }
     img {
       height: 100%;
       width: 100%;
@@ -235,13 +255,16 @@ button {
     .info-container-services {
       margin-top: 5rem;
       margin-bottom: 5rem;
+      h2 {
+        display: none;
+      }
     }
     .image-wrapper-worker {
-      height: 50vh;
-      width: 100%;
+      height: 40vh;
+      .services-wrapper {
+        display: block;
+      }
       img {
-        height: 100%;
-        width: 100%;
         object-fit: cover;
         object-position: 50% 10%;
       }
@@ -251,6 +274,9 @@ button {
   .services-for-employers {
     flex-wrap: wrap;
     .info-container-services {
+      h2 {
+        display: none;
+      }
       margin-top: 5rem;
       margin-bottom: 5rem;
       .labour-and-negotiations-container {
@@ -258,11 +284,11 @@ button {
       }
     }
     .image-wrapper-employer {
-      height: 50vh;
-      width: 100%;
+      height: 40vh;
+      .services-wrapper {
+        display: block;
+      }
       img {
-        height: 100%;
-        width: 100%;
         object-fit: cover;
       }
     }
@@ -296,6 +322,7 @@ button {
         width: 90%;
         .labour-and-negotiations-container {
           flex-wrap: wrap;
+          justify-content: center;
           .labour-law-container {
             margin-bottom: 3rem;
           }
@@ -328,7 +355,6 @@ button {
       }
     }
     .image-wrapper-employer {
-      height: 50vh;
       width: 100%;
       img {
         height: 100%;
