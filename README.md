@@ -1,6 +1,6 @@
 # Arbetsjuristen
 
-A website created for a fictional swedish law firm called Arbetsjuristen. The law firm represent both employers and employees in all areas of **labor law**.
+A website created for a fictional swedish law firm called Arbetsjuristen. The law firm represents both employers and employees in all areas of **labor law**.
 
 ## Design
 
