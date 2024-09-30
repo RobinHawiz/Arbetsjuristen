@@ -12,22 +12,27 @@ $tertiary-font: 1.8rem;
 
 // Global functions
 
-@mixin flex($direction, $justify) {
+@mixin flex($align, $justify, $direction) {
   display: -webkit-box; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */
   display: -moz-box; /* Firefox 2-21 */
   display: -ms-flexbox; /* Internet explorer 10 */
   display: -webkit-flex; /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
   display: flex;
-  -webkit-box-align: $direction;
-  -moz-align-items: $direction;
-  -ms-align-items: $direction;
-  -webkit-align-items: $direction;
-  align-items: $direction;
+  -webkit-box-align: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  -webkit-align-items: $align;
+  align-items: $align;
   -webkit-box-pack: $justify;
   -moz-justify-content: $justify;
   -ms-justify-content: $justify;
   -webkit-justify-content: $justify;
   justify-content: $justify;
+  -webkit-flex-direction: $direction;
+  -moz-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  -o-flex-direction: $direction;
+  flex-direction: $direction;
 }
 
 * {
@@ -47,4 +52,167 @@ body {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+}
+
+h1 {
+  font-size: $h1-font;
+  color: $primary;
+}
+
+h2 {
+  font-size: $h2-font;
+  color: $primary;
+}
+
+h3 {
+  font-size: $h3-font;
+  color: $primary;
+}
+
+p {
+  color: $primary;
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  min-height: 12vh;
+  @include flex(center, space-between, row);
+  -webkit-box-orient: horizontal; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+  .logo {
+    flex-grow: 4.5;
+  }
+  ul {
+    flex-grow: 1;
+    @include flex(center, space-between, row);
+    -webkit-box-orient: horizontal; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+    li {
+      position: relative;
+      .border-link {
+        position: absolute;
+        bottom: 0;
+        transition: all ease 0.2s;
+        background: $primary;
+        width: 0rem;
+        height: 0.2rem;
+      }
+      &:hover {
+        .border-link {
+          width: 100%;
+        }
+      }
+      a {
+        color: $primary;
+        font-size: $secondary-font;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+footer {
+  min-height: 12vh;
+  background: $primary;
+  @include flex(center, center, column);
+  .footer-container {
+    width: 90%;
+    margin: auto;
+    @include flex(center, space-between, row);
+    flex-wrap: wrap;
+    .company-information-container {
+      @include flex(normal, center, column);
+      flex-grow: 1.5;
+      .contact-info-container {
+        width: 100%;
+        @include flex(center, normal, row);
+        p {
+          font-size: $tertiary-font;
+          font-weight: 400;
+          a {
+            color: $secondary;
+            text-decoration: underline;
+          }
+        }
+        .contact-us {
+          width: 14rem;
+          margin-left: 3rem;
+          a {
+            @include flex(center, space-between, row);
+            p {
+              color: $secondary;
+              font-size: $tertiary-font;
+            }
+            img {
+              transition: all ease 0.3s;
+              width: 2rem;
+              height: 2rem;
+            }
+            &:hover {
+              img {
+                transform: translate(1rem);
+              }
+            }
+          }
+        }
+      }
+    }
+    ul.socials {
+      @include flex(center, space-between, row);
+      flex-grow: 1;
+      li {
+        a {
+          img {
+            transition: all ease 0.5s;
+          }
+        }
+        &:hover {
+          a {
+            img {
+              /* primary color */
+              filter: invert(53%) sepia(31%) saturate(1360%) hue-rotate(193deg)
+                brightness(98%) contrast(96%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+    .logo {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    ul {
+      flex-basis: 60rem;
+      flex-wrap: wrap;
+      li {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  footer {
+    .footer-container {
+      .company-information-container {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        flex-basis: 40rem;
+        @include flex(center, center, column);
+        .contact-info-container {
+          @include flex(center, center, row);
+        }
+      }
+      ul.socials {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        flex-basis: 40rem;
+        @include flex(center, space-evenly, row);
+      }
+    }
+  }
 }

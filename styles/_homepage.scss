@@ -1,0 +1,369 @@
+.homepage {
+  min-height: 100vh;
+  background: $secondary; /* fallback */
+  background-image: url("/img/LandingPage.jpg"); /* fallback */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("/img/LandingPage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.info-container {
+  min-height: 82vh;
+  width: 100%;
+  @include flex(center, center, column);
+  -webkit-box-orient: vertical; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+  .text-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 50.1rem;
+    p {
+      line-height: 2.7rem;
+      font-size: $secondary-font;
+    }
+  }
+}
+
+button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15rem;
+  height: 5rem;
+
+  .border-line {
+    position: absolute;
+    background: $primary;
+    transition: all ease 0.3s;
+  }
+
+  .border-line.top-right-vertical {
+    top: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.top-right-horizontal {
+    top: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
+  .border-line.bottom-right-vertical {
+    bottom: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.bottom-right-horizontal {
+    bottom: 0;
+    right: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
+  p {
+    font-size: $tertiary-font;
+  }
+
+  &:hover {
+    .border-line.top-right-vertical {
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.top-right-horizontal {
+      top: 0;
+      width: 15rem;
+      height: 0.2rem;
+    }
+
+    .border-line.bottom-right-vertical {
+      bottom: 0;
+      right: 0;
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.bottom-right-horizontal {
+      bottom: 0;
+      right: 0;
+      width: 15rem;
+      height: 0.2rem;
+    }
+  }
+}
+
+/* ---------------------------services-for-workers--------------------------- */
+
+.services-for-workers {
+  background-color: $secondary;
+  min-height: 70vh;
+  @include flex(normal, normal, row);
+  .info-container-services {
+    width: 100%;
+    @include flex(center, center, column);
+    .info-content-container-services {
+      width: calc(30rem + 20vw);
+      h2 {
+        margin-bottom: calc(2rem + 1vw);
+        margin-left: 2rem;
+      }
+      .labour-and-negotiations-container {
+        @include flex(normal, space-between, row);
+        line-height: 2.7rem;
+        margin-left: 2rem;
+        li {
+          margin-left: 2.5rem;
+          list-style-type: disc;
+          color: $primary;
+          line-height: 3.5rem;
+          font-size: $tertiary-font;
+        }
+        p {
+          font-size: $primary-font;
+        }
+
+        .read-more {
+          width: 10rem;
+          a {
+            @include flex(center, space-between, row);
+            p {
+              font-size: $tertiary-font;
+              color: $link;
+            }
+
+            img {
+              transition: all ease 0.3s;
+              width: 2.4rem;
+              height: 2.4rem;
+            }
+
+            &:hover {
+              img {
+                transform: translate(1rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .image-wrapper-worker {
+    position: relative;
+    min-height: 70vh;
+    width: 100%;
+    .services-wrapper {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5rem;
+      background: rgb(47, 48, 58, 0.8);
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+}
+
+/* ---------------------------services-for-employers--------------------------- */
+
+.services-for-employers {
+  background-color: $secondary;
+  min-height: 120vh;
+  @include flex(stretch, stretch, row);
+  .info-container-services {
+    width: 100%;
+    @include flex(center, center, column);
+    .info-content-container-services {
+      width: calc(30rem + 20vw);
+      h2 {
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        margin-left: 2rem;
+      }
+      .labour-and-negotiations-container > * {
+        margin-top: 1.4vw;
+        margin-bottom: 1.4vw;
+        margin-left: 2rem;
+      }
+      .labour-and-negotiations-container {
+        line-height: 2.7rem;
+        @include flex(normal, space-between, column);
+        li {
+          margin-left: 2.5rem;
+          list-style-type: disc;
+          color: $primary;
+          line-height: 3.5rem;
+          font-size: $tertiary-font;
+        }
+        p {
+          font-size: $primary-font;
+        }
+
+        .read-more {
+          width: 10rem;
+          a {
+            @include flex(center, space-between, row);
+            p {
+              font-size: $tertiary-font;
+              color: $link;
+            }
+
+            img {
+              transition: all ease 0.3s;
+              width: 2.4rem;
+              height: 2.4rem;
+            }
+
+            &:hover {
+              img {
+                transform: translate(1rem);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .image-wrapper-employer {
+    position: relative;
+    min-height: 120vh;
+    width: 100%;
+    .services-wrapper {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 5rem;
+      background: rgb(47, 48, 58, 0.8);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services-for-workers {
+    flex-wrap: wrap-reverse;
+    .info-container-services {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      h2 {
+        display: none;
+      }
+    }
+    .image-wrapper-worker {
+      /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 70vh. */
+      min-height: 40vh;
+      height: 40vh;
+      .services-wrapper {
+        display: block;
+      }
+      img {
+        object-fit: cover;
+        object-position: 50% 10%;
+      }
+    }
+  }
+
+  .services-for-employers {
+    flex-wrap: wrap;
+    .info-container-services {
+      h2 {
+        display: none;
+      }
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      .labour-and-negotiations-container {
+        height: 100%;
+      }
+    }
+    .image-wrapper-employer {
+      /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 120vh. */
+      min-height: 40vh;
+      height: 40vh;
+      .services-wrapper {
+        display: block;
+      }
+      img {
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .homepage {
+    .info-container {
+      h2 {
+        text-align: center;
+      }
+      .text-wrapper {
+        text-align: center;
+        width: 90%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .services-for-workers {
+    h2 {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      text-align: center;
+    }
+    .info-container-services {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      .info-content-container-services {
+        width: 90%;
+        .labour-and-negotiations-container {
+          flex-wrap: wrap;
+          justify-content: center;
+          .labour-law-container {
+            margin-bottom: 3rem;
+          }
+        }
+        .labour-and-negotiations-container > * {
+          margin-left: 2rem;
+          flex-basis: 50rem;
+        }
+      }
+    }
+  }
+
+  .services-for-employers {
+    flex-wrap: wrap;
+    h2 {
+      text-align: center;
+    }
+    .info-container-services {
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      .info-content-container-services {
+        width: 90%;
+        .labour-and-negotiations-container {
+          height: 100%;
+        }
+        .labour-and-negotiations-container > * {
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -15,4 +16,666 @@ body {
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+}
+
+h1 {
+  font-size: 5rem;
+  color: #ece8e5;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #ece8e5;
+}
+
+h3 {
+  font-size: 2.5rem;
+  color: #ece8e5;
+}
+
+p {
+  color: #ece8e5;
+}
+
+nav {
+  width: 90%;
+  margin: auto;
+  min-height: 12vh; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+}
+nav .logo {
+  flex-grow: 4.5;
+}
+nav ul {
+  flex-grow: 1; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+}
+nav ul li {
+  position: relative;
+}
+nav ul li .border-link {
+  position: absolute;
+  bottom: 0;
+  transition: all ease 0.2s;
+  background: #ece8e5;
+  width: 0rem;
+  height: 0.2rem;
+}
+nav ul li:hover .border-link {
+  width: 100%;
+}
+nav ul li a {
+  color: #ece8e5;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+footer {
+  min-height: 12vh;
+  background: #ece8e5; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+footer .footer-container {
+  width: 90%;
+  margin: auto; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer .footer-container .company-information-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  flex-grow: 1.5;
+}
+footer .footer-container .company-information-container .contact-info-container {
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: normal;
+  -ms-justify-content: normal;
+  justify-content: normal;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+footer .footer-container .company-information-container .contact-info-container p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+footer .footer-container .company-information-container .contact-info-container p a {
+  color: #2f303a;
+  text-decoration: underline;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us {
+  width: 14rem;
+  margin-left: 3rem;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a p {
+  color: #2f303a;
+  font-size: 1.8rem;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a img {
+  transition: all ease 0.3s;
+  width: 2rem;
+  height: 2rem;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a:hover img {
+  transform: translate(1rem);
+}
+footer .footer-container ul.socials { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  flex-grow: 1;
+}
+footer .footer-container ul.socials li a img {
+  transition: all ease 0.5s;
+}
+footer .footer-container ul.socials li:hover a img {
+  /* primary color */
+  filter: invert(53%) sepia(31%) saturate(1360%) hue-rotate(193deg) brightness(98%) contrast(96%);
+}
+
+@media screen and (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;
+  }
+  nav .logo {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+  nav ul {
+    flex-basis: 60rem;
+    flex-wrap: wrap;
+  }
+  nav ul li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+  footer .footer-container .company-information-container {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    flex-basis: 40rem; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+  }
+  footer .footer-container .company-information-container .contact-info-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+  }
+  footer .footer-container ul.socials {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-basis: 40rem; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -moz-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+  }
+}
+.homepage {
+  min-height: 100vh;
+  background: #2f303a; /* fallback */
+  background-image: url("/img/LandingPage.jpg"); /* fallback */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), url("/img/LandingPage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.info-container {
+  min-height: 82vh;
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+}
+.info-container .text-wrapper {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 50.1rem;
+}
+.info-container .text-wrapper p {
+  line-height: 2.7rem;
+  font-size: 2rem;
+}
+
+button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15rem;
+  height: 5rem;
+}
+button .border-line {
+  position: absolute;
+  background: #ece8e5;
+  transition: all ease 0.3s;
+}
+button .border-line.top-right-vertical {
+  top: 0;
+  width: 0.2rem;
+  height: 2rem;
+}
+button .border-line.top-right-horizontal {
+  top: 0;
+  width: 2rem;
+  height: 0.2rem;
+}
+button .border-line.bottom-right-vertical {
+  bottom: 0;
+  right: 0;
+  width: 0.2rem;
+  height: 2rem;
+}
+button .border-line.bottom-right-horizontal {
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 0.2rem;
+}
+button p {
+  font-size: 1.8rem;
+}
+button:hover .border-line.top-right-vertical {
+  width: 0.2rem;
+  height: 5rem;
+}
+button:hover .border-line.top-right-horizontal {
+  top: 0;
+  width: 15rem;
+  height: 0.2rem;
+}
+button:hover .border-line.bottom-right-vertical {
+  bottom: 0;
+  right: 0;
+  width: 0.2rem;
+  height: 5rem;
+}
+button:hover .border-line.bottom-right-horizontal {
+  bottom: 0;
+  right: 0;
+  width: 15rem;
+  height: 0.2rem;
+}
+
+/* ---------------------------services-for-workers--------------------------- */
+.services-for-workers {
+  background-color: #2f303a;
+  min-height: 70vh; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: normal;
+  -ms-justify-content: normal;
+  justify-content: normal;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-workers .info-container-services {
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.services-for-workers .info-container-services .info-content-container-services {
+  width: calc(30rem + 20vw);
+}
+.services-for-workers .info-container-services .info-content-container-services h2 {
+  margin-bottom: calc(2rem + 1vw);
+  margin-left: 2rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  line-height: 2.7rem;
+  margin-left: 2rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container li {
+  margin-left: 2.5rem;
+  list-style-type: disc;
+  color: #ece8e5;
+  line-height: 3.5rem;
+  font-size: 1.8rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container p {
+  font-size: 2.3rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more {
+  width: 10rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a p {
+  font-size: 1.8rem;
+  color: #688bf5;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a img {
+  transition: all ease 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a:hover img {
+  transform: translate(1rem);
+}
+.services-for-workers .image-wrapper-worker {
+  position: relative;
+  min-height: 70vh;
+  width: 100%;
+}
+.services-for-workers .image-wrapper-worker .services-wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem;
+  background: rgba(47, 48, 58, 0.8);
+}
+.services-for-workers .image-wrapper-worker img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+
+/* ---------------------------services-for-employers--------------------------- */
+.services-for-employers {
+  background-color: #2f303a;
+  min-height: 120vh; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  -moz-justify-content: stretch;
+  -ms-justify-content: stretch;
+  justify-content: stretch;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-employers .info-container-services {
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.services-for-employers .info-container-services .info-content-container-services {
+  width: calc(30rem + 20vw);
+}
+.services-for-employers .info-container-services .info-content-container-services h2 {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
+  margin-top: 1.4vw;
+  margin-bottom: 1.4vw;
+  margin-left: 2rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container {
+  line-height: 2.7rem; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container li {
+  margin-left: 2.5rem;
+  list-style-type: disc;
+  color: #ece8e5;
+  line-height: 3.5rem;
+  font-size: 1.8rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container p {
+  font-size: 2.3rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more {
+  width: 10rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a p {
+  font-size: 1.8rem;
+  color: #688bf5;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a img {
+  transition: all ease 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a:hover img {
+  transform: translate(1rem);
+}
+.services-for-employers .image-wrapper-employer {
+  position: relative;
+  min-height: 120vh;
+  width: 100%;
+}
+.services-for-employers .image-wrapper-employer .services-wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem;
+  background: rgba(47, 48, 58, 0.8);
+}
+.services-for-employers .image-wrapper-employer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+  .services-for-workers {
+    flex-wrap: wrap-reverse;
+  }
+  .services-for-workers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-workers .info-container-services h2 {
+    display: none;
+  }
+  .services-for-workers .image-wrapper-worker {
+    /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 70vh. */
+    min-height: 40vh;
+    height: 40vh;
+  }
+  .services-for-workers .image-wrapper-worker .services-wrapper {
+    display: block;
+  }
+  .services-for-workers .image-wrapper-worker img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 10%;
+       object-position: 50% 10%;
+  }
+  .services-for-employers {
+    flex-wrap: wrap;
+  }
+  .services-for-employers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-employers .info-container-services h2 {
+    display: none;
+  }
+  .services-for-employers .info-container-services .labour-and-negotiations-container {
+    height: 100%;
+  }
+  .services-for-employers .image-wrapper-employer {
+    /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 120vh. */
+    min-height: 40vh;
+    height: 40vh;
+  }
+  .services-for-employers .image-wrapper-employer .services-wrapper {
+    display: block;
+  }
+  .services-for-employers .image-wrapper-employer img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+@media screen and (max-width: 800px) {
+  .homepage .info-container h2 {
+    text-align: center;
+  }
+  .homepage .info-container .text-wrapper {
+    text-align: center;
+    width: 90%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .services-for-workers h2 {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-align: center;
+  }
+  .services-for-workers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-workers .info-container-services .info-content-container-services {
+    width: 90%;
+  }
+  .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container .labour-law-container {
+    margin-bottom: 3rem;
+  }
+  .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
+    margin-left: 2rem;
+    flex-basis: 50rem;
+  }
+  .services-for-employers {
+    flex-wrap: wrap;
+  }
+  .services-for-employers h2 {
+    text-align: center;
+  }
+  .services-for-employers .info-container-services {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .services-for-employers .info-container-services .info-content-container-services {
+    width: 90%;
+  }
+  .services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container {
+    height: 100%;
+  }
+  .services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
