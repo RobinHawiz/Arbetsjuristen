@@ -351,12 +351,12 @@ button:hover .border-line.bottom-right-horizontal {
   background-color: #2f303a;
   min-height: 70vh; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
   display: flex;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: normal;
+  -ms-justify-content: normal;
+  justify-content: normal;
   -moz-flex-direction: row;
   -o-flex-direction: row;
   flex-direction: row;
@@ -379,6 +379,7 @@ button:hover .border-line.bottom-right-horizontal {
 }
 .services-for-workers .info-container-services .info-content-container-services h2 {
   margin-bottom: calc(2rem + 1vw);
+  margin-left: 2rem;
 }
 .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
   display: flex;
@@ -392,6 +393,7 @@ button:hover .border-line.bottom-right-horizontal {
   -o-flex-direction: row;
   flex-direction: row;
   line-height: 2.7rem;
+  margin-left: 2rem;
 }
 .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container li {
   margin-left: 2.5rem;
@@ -432,7 +434,7 @@ button:hover .border-line.bottom-right-horizontal {
 }
 .services-for-workers .image-wrapper-worker {
   position: relative;
-  height: 100%;
+  min-height: 70vh;
   width: 100%;
 }
 .services-for-workers .image-wrapper-worker .services-wrapper {
@@ -449,6 +451,7 @@ button:hover .border-line.bottom-right-horizontal {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  vertical-align: middle;
 }
 
 /* ---------------------------services-for-employers--------------------------- */
@@ -456,12 +459,12 @@ button:hover .border-line.bottom-right-horizontal {
   background-color: #2f303a;
   min-height: 120vh; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
   display: flex;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  -moz-justify-content: stretch;
+  -ms-justify-content: stretch;
+  justify-content: stretch;
   -moz-flex-direction: row;
   -o-flex-direction: row;
   flex-direction: row;
@@ -484,10 +487,13 @@ button:hover .border-line.bottom-right-horizontal {
 }
 .services-for-employers .info-container-services .info-content-container-services h2 {
   margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-left: 2rem;
 }
 .services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
   margin-top: 1.4vw;
   margin-bottom: 1.4vw;
+  margin-left: 2rem;
 }
 .services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container {
   line-height: 2.7rem; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
@@ -541,7 +547,7 @@ button:hover .border-line.bottom-right-horizontal {
 }
 .services-for-employers .image-wrapper-employer {
   position: relative;
-  height: 100%;
+  min-height: 120vh;
   width: 100%;
 }
 .services-for-employers .image-wrapper-employer .services-wrapper {
@@ -554,13 +560,14 @@ button:hover .border-line.bottom-right-horizontal {
   background: rgba(47, 48, 58, 0.8);
 }
 .services-for-employers .image-wrapper-employer img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  vertical-align: middle;
 }
 
-@media screen and (max-width: 1365px) {
+@media screen and (max-width: 1024px) {
   .services-for-workers {
     flex-wrap: wrap-reverse;
   }
@@ -572,6 +579,8 @@ button:hover .border-line.bottom-right-horizontal {
     display: none;
   }
   .services-for-workers .image-wrapper-worker {
+    /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 70vh. */
+    min-height: 40vh;
     height: 40vh;
   }
   .services-for-workers .image-wrapper-worker .services-wrapper {
@@ -597,6 +606,8 @@ button:hover .border-line.bottom-right-horizontal {
     height: 100%;
   }
   .services-for-employers .image-wrapper-employer {
+    /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 120vh. */
+    min-height: 40vh;
     height: 40vh;
   }
   .services-for-employers .image-wrapper-employer .services-wrapper {
