@@ -88,6 +88,111 @@ nav ul li a {
   font-weight: 400;
 }
 
+footer {
+  min-height: 12vh;
+  background: #ece8e5; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+footer .footer-container {
+  width: 90%;
+  margin: auto; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer .footer-container .company-information-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  flex-grow: 1.5;
+}
+footer .footer-container .company-information-container .contact-info-container {
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: normal;
+  -ms-justify-content: normal;
+  justify-content: normal;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+footer .footer-container .company-information-container .contact-info-container p {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+footer .footer-container .company-information-container .contact-info-container p a {
+  color: #2f303a;
+  text-decoration: underline;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us {
+  width: 14rem;
+  margin-left: 3rem;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a p {
+  color: #2f303a;
+  font-size: 1.8rem;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a img {
+  transition: all ease 0.3s;
+  width: 2rem;
+  height: 2rem;
+}
+footer .footer-container .company-information-container .contact-info-container .contact-us a:hover img {
+  transform: translate(1rem);
+}
+footer .footer-container ul.socials { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
 @media screen and (max-width: 800px) {
   nav {
     flex-wrap: wrap;
@@ -104,6 +209,48 @@ nav ul li a {
   nav ul li {
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+  }
+  footer .footer-container .company-information-container {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    flex-basis: 40rem; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+  }
+  footer .footer-container .company-information-container .contact-info-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -moz-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+  }
+  footer .footer-container ul.socials {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    flex-basis: 40rem; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+    display: flex;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -moz-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -moz-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
   }
 }
 .homepage {
@@ -388,7 +535,6 @@ button:hover .border-line.bottom-right-horizontal {
   transition: all ease 0.3s;
   width: 2.4rem;
   height: 2.4rem;
-  filter: #688bf5;
 }
 .services-for-employers .info-container-services .info-content-container-services .labour-and-negotiations-container .read-more a:hover img {
   transform: translate(1rem);
