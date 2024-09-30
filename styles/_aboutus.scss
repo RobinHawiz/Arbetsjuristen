@@ -1,0 +1,231 @@
+.about-us {
+  min-height: 100vh;
+  background: $secondary; /* fallback */
+  background-image: url("/img/About.jpg"); /* fallback */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("/img/About.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.info-container {
+  min-height: 82vh;
+  width: 100%;
+  @include flex(center, center, column);
+  -webkit-box-orient: vertical; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+  .text-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 50.1rem;
+    p {
+      line-height: 2.7rem;
+      font-size: $secondary-font;
+    }
+  }
+}
+
+button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15rem;
+  height: 5rem;
+
+  .border-line {
+    position: absolute;
+    background: $primary;
+    transition: all ease 0.3s;
+  }
+
+  .border-line.top-right-vertical {
+    top: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.top-right-horizontal {
+    top: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
+  .border-line.bottom-right-vertical {
+    bottom: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.bottom-right-horizontal {
+    bottom: 0;
+    right: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
+  p {
+    font-size: $tertiary-font;
+  }
+
+  &:hover {
+    .border-line.top-right-vertical {
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.top-right-horizontal {
+      top: 0;
+      width: 15rem;
+      height: 0.2rem;
+    }
+
+    .border-line.bottom-right-vertical {
+      bottom: 0;
+      right: 0;
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.bottom-right-horizontal {
+      bottom: 0;
+      right: 0;
+      width: 15rem;
+      height: 0.2rem;
+    }
+  }
+}
+
+.employee-page {
+  min-height: 50vh;
+  background: linear-gradient(
+    to bottom,
+    rgb(231, 233, 235) 0%,
+    rgb(224, 236, 250) 100%
+  );
+  @include flex(center, normal, row);
+  .information-wrapper {
+    flex-grow: 1;
+    @include flex(center, center, column);
+    .information-container {
+      width: 60rem;
+      h2 {
+        margin-bottom: 4rem;
+        color: $secondary;
+      }
+      p {
+        color: $secondary;
+        font-size: $secondary-font;
+        font-weight: 400;
+      }
+      p.name,
+      p.title {
+        margin-top: 0.2rem;
+        font-weight: 700;
+      }
+      p.title {
+        margin-bottom: 0.2rem;
+      }
+      p a {
+        color: $secondary;
+        text-decoration: underline;
+      }
+      .contact-us {
+        width: 15rem;
+        margin-top: 0.2rem;
+        a {
+          @include flex(center, space-between, row);
+          p {
+            color: $link;
+            font-size: $secondary-font;
+          }
+          img {
+            transition: all ease 0.3s;
+            width: 2rem;
+            height: 2rem;
+          }
+          &:hover {
+            img {
+              transform: translate(1rem);
+            }
+          }
+        }
+      }
+    }
+  }
+  .image-wrapper {
+    flex-grow: 1;
+    align-self: flex-end;
+    img {
+      height: calc(10rem + 40vw);
+      object-fit: contain;
+      vertical-align: middle;
+    }
+  }
+}
+
+.employee-page.owner {
+  background: linear-gradient(
+    to bottom,
+    rgb(224, 236, 250) 0%,
+    rgb(231, 233, 235) 100%
+  );
+  .image-wrapper {
+    img {
+      float: right;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .employee-page {
+    flex-wrap: wrap-reverse;
+    .information-wrapper {
+      flex-basis: 100rem;
+      .information-container {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+    .image-wrapper {
+      text-align: center;
+    }
+  }
+  .employee-page.owner {
+    flex-wrap: wrap;
+    .image-wrapper {
+      img {
+        float: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .about-us {
+    .info-container {
+      h2 {
+        text-align: center;
+      }
+      .text-wrapper {
+        text-align: center;
+        width: 90%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .employee-page {
+    .information-wrapper {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      .information-container {
+        width: 80%;
+        margin: auto;
+        h2 {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

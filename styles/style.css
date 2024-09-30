@@ -678,4 +678,237 @@ button:hover .border-line.bottom-right-horizontal {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+}
+.about-us {
+  min-height: 100vh;
+  background: #2f303a; /* fallback */
+  background-image: url("/img/About.jpg"); /* fallback */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%), url("/img/About.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.info-container {
+  min-height: 82vh;
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column; /* Internet explorer 10 (column = vertical, row = horizontal)*/
+}
+.info-container .text-wrapper {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  width: 50.1rem;
+}
+.info-container .text-wrapper p {
+  line-height: 2.7rem;
+  font-size: 2rem;
+}
+
+button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15rem;
+  height: 5rem;
+}
+button .border-line {
+  position: absolute;
+  background: #ece8e5;
+  transition: all ease 0.3s;
+}
+button .border-line.top-right-vertical {
+  top: 0;
+  width: 0.2rem;
+  height: 2rem;
+}
+button .border-line.top-right-horizontal {
+  top: 0;
+  width: 2rem;
+  height: 0.2rem;
+}
+button .border-line.bottom-right-vertical {
+  bottom: 0;
+  right: 0;
+  width: 0.2rem;
+  height: 2rem;
+}
+button .border-line.bottom-right-horizontal {
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 0.2rem;
+}
+button p {
+  font-size: 1.8rem;
+}
+button:hover .border-line.top-right-vertical {
+  width: 0.2rem;
+  height: 5rem;
+}
+button:hover .border-line.top-right-horizontal {
+  top: 0;
+  width: 15rem;
+  height: 0.2rem;
+}
+button:hover .border-line.bottom-right-vertical {
+  bottom: 0;
+  right: 0;
+  width: 0.2rem;
+  height: 5rem;
+}
+button:hover .border-line.bottom-right-horizontal {
+  bottom: 0;
+  right: 0;
+  width: 15rem;
+  height: 0.2rem;
+}
+
+.employee-page {
+  min-height: 50vh;
+  background: linear-gradient(to bottom, rgb(231, 233, 235) 0%, rgb(224, 236, 250) 100%); /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: normal;
+  -ms-justify-content: normal;
+  justify-content: normal;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.employee-page .information-wrapper {
+  flex-grow: 1; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.employee-page .information-wrapper .information-container {
+  width: 60rem;
+}
+.employee-page .information-wrapper .information-container h2 {
+  margin-bottom: 4rem;
+  color: #2f303a;
+}
+.employee-page .information-wrapper .information-container p {
+  color: #2f303a;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.employee-page .information-wrapper .information-container p.name,
+.employee-page .information-wrapper .information-container p.title {
+  margin-top: 0.2rem;
+  font-weight: 700;
+}
+.employee-page .information-wrapper .information-container p.title {
+  margin-bottom: 0.2rem;
+}
+.employee-page .information-wrapper .information-container p a {
+  color: #2f303a;
+  text-decoration: underline;
+}
+.employee-page .information-wrapper .information-container .contact-us {
+  width: 15rem;
+  margin-top: 0.2rem;
+}
+.employee-page .information-wrapper .information-container .contact-us a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.employee-page .information-wrapper .information-container .contact-us a p {
+  color: #688bf5;
+  font-size: 2rem;
+}
+.employee-page .information-wrapper .information-container .contact-us a img {
+  transition: all ease 0.3s;
+  width: 2rem;
+  height: 2rem;
+}
+.employee-page .information-wrapper .information-container .contact-us a:hover img {
+  transform: translate(1rem);
+}
+.employee-page .image-wrapper {
+  flex-grow: 1;
+  align-self: flex-end;
+}
+.employee-page .image-wrapper img {
+  height: calc(10rem + 40vw);
+  -o-object-fit: contain;
+     object-fit: contain;
+  vertical-align: middle;
+}
+
+.employee-page.owner {
+  background: linear-gradient(to bottom, rgb(224, 236, 250) 0%, rgb(231, 233, 235) 100%);
+}
+.employee-page.owner .image-wrapper img {
+  float: right;
+}
+
+@media screen and (max-width: 1024px) {
+  .employee-page {
+    flex-wrap: wrap-reverse;
+  }
+  .employee-page .information-wrapper {
+    flex-basis: 100rem;
+  }
+  .employee-page .information-wrapper .information-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .employee-page .image-wrapper {
+    text-align: center;
+  }
+  .employee-page.owner {
+    flex-wrap: wrap;
+  }
+  .employee-page.owner .image-wrapper img {
+    float: none;
+  }
+}
+@media screen and (max-width: 800px) {
+  .about-us .info-container h2 {
+    text-align: center;
+  }
+  .about-us .info-container .text-wrapper {
+    text-align: center;
+    width: 90%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .employee-page .information-wrapper {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .employee-page .information-wrapper .information-container {
+    width: 80%;
+    margin: auto;
+  }
+  .employee-page .information-wrapper .information-container h2 {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
