@@ -159,6 +159,22 @@ footer {
     ul.socials {
       @include flex(center, space-between, row);
       flex-grow: 1;
+      li {
+        a {
+          img {
+            transition: all ease 0.5s;
+          }
+        }
+        &:hover {
+          a {
+            img {
+              /* primary color */
+              filter: invert(53%) sepia(31%) saturate(1360%) hue-rotate(193deg)
+                brightness(98%) contrast(96%);
+            }
+          }
+        }
+      }
     }
   }
 }
