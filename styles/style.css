@@ -192,6 +192,13 @@ footer .footer-container ul.socials { /* Chrome 4-20, Safari 3.1-6, Safari på i
   flex-direction: row;
   flex-grow: 1;
 }
+footer .footer-container ul.socials li a img {
+  transition: all ease 0.5s;
+}
+footer .footer-container ul.socials li:hover a img {
+  /* primary color */
+  filter: invert(53%) sepia(31%) saturate(1360%) hue-rotate(193deg) brightness(98%) contrast(96%);
+}
 
 @media screen and (max-width: 800px) {
   nav {
@@ -623,6 +630,7 @@ button:hover .border-line.bottom-right-horizontal {
     text-align: center;
   }
   .homepage .info-container .text-wrapper {
+    text-align: center;
     width: 90%;
     margin-top: 3rem;
     margin-bottom: 3rem;
