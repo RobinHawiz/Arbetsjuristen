@@ -1040,4 +1040,226 @@ button:hover .border-line.bottom-right-horizontal {
   .contact-page form .input-box-container .input-box input {
     width: 100%;
   }
+}
+.employer-page {
+  min-height: 100vh;
+  background: #2f303a; /* fallback */
+  background-image: url("../img/ArbetsgivarePage.jpg"); /* fallback */
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%), url("../img/ArbetsgivarePage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.introduction {
+  min-height: 50vh;
+  background: #2f303a; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.introduction .introduction-container {
+  width: 100rem;
+}
+.introduction .introduction-container h2 {
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.introduction .introduction-container p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.introduction .introduction-container .read-more-1 {
+  margin-top: 3rem;
+  width: 32rem;
+}
+.introduction .introduction-container .read-more-2 {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  width: 31rem;
+}
+.introduction .introduction-container .read-more a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.introduction .introduction-container .read-more a p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #688bf5;
+}
+.introduction .introduction-container .read-more a img {
+  transition: all ease 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.introduction .introduction-container .read-more a:hover img {
+  transform: translate(1rem);
+}
+
+.services-page {
+  min-height: 50vh;
+  background: #2f303a; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: normal;
+  -ms-justify-content: normal;
+  justify-content: normal;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+
+.services-wrapper {
+  width: 100%; /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+}
+.services-wrapper .services-container {
+  width: calc(30rem + 20vw);
+}
+.services-wrapper .services-container h2 {
+  align-self: flex-start;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+.services-wrapper .services-container p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.services-wrapper .services-container .read-more.negotiations {
+  width: 22rem;
+}
+.services-wrapper .services-container .read-more.overall-labour-law {
+  width: 26.5rem;
+}
+.services-wrapper .services-container .read-more {
+  margin-top: 3rem;
+  align-self: flex-start;
+  width: 20.5rem;
+}
+.services-wrapper .services-container .read-more a { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.services-wrapper .services-container .read-more a p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #688bf5;
+}
+.services-wrapper .services-container .read-more a img {
+  transition: all ease 0.3s;
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.services-wrapper .services-container .read-more a:hover img {
+  transform: translate(1rem);
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
+.image-wrapper .text-wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3.5rem;
+  background: rgba(47, 48, 58, 0.8);
+}
+.image-wrapper img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction .introduction-container {
+    width: 70rem;
+  }
+  .services-wrapper .services-container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .services-wrapper .services-container h2 {
+    display: none;
+  }
+  .labour-law {
+    flex-wrap: wrap-reverse;
+  }
+  .negotiations {
+    flex-wrap: wrap;
+  }
+  .overall-labour-law {
+    flex-wrap: wrap-reverse;
+  }
+  .image-wrapper {
+    height: 35vh;
+  }
+  .image-wrapper .text-wrapper {
+    display: block;
+  }
+  .image-wrapper img.overall-labour-law {
+    -o-object-position: 50% 10%;
+       object-position: 50% 10%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .employer-page .info-container h2 {
+    text-align: center;
+  }
+  .employer-page .info-container .text-wrapper {
+    text-align: center;
+    width: 90%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .introduction .introduction-container {
+    width: 90%;
+  }
+  .introduction .introduction-container .read-more {
+    width: 24rem;
+  }
+  .services-wrapper .services-container {
+    width: 90%;
+  }
+  .services-wrapper .services-container .read-more.overall-labour-law {
+    width: 17.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
