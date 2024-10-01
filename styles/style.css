@@ -457,7 +457,7 @@ button:hover .border-line.bottom-right-horizontal {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 5rem;
+  padding: 4rem;
   background: rgba(47, 48, 58, 0.8);
 }
 .services-for-workers .image-wrapper-worker img {
@@ -570,7 +570,7 @@ button:hover .border-line.bottom-right-horizontal {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 5rem;
+  padding: 4rem;
   background: rgba(47, 48, 58, 0.8);
 }
 .services-for-employers .image-wrapper-employer img {
@@ -643,8 +643,6 @@ button:hover .border-line.bottom-right-horizontal {
     margin-bottom: 3rem;
   }
   .services-for-workers h2 {
-    margin-left: 1rem;
-    margin-right: 1rem;
     text-align: center;
   }
   .services-for-workers .info-container-services {
@@ -662,7 +660,6 @@ button:hover .border-line.bottom-right-horizontal {
     margin-bottom: 3rem;
   }
   .services-for-workers .info-container-services .info-content-container-services .labour-and-negotiations-container > * {
-    margin-left: 2rem;
     flex-basis: 50rem;
   }
   .services-for-employers {

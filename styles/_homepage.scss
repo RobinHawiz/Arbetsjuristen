@@ -161,7 +161,7 @@ button {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      padding: 5rem;
+      padding: 4rem;
       background: rgb(47, 48, 58, 0.8);
     }
     img {
@@ -243,7 +243,7 @@ button {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      padding: 5rem;
+      padding: 4rem;
       background: rgb(47, 48, 58, 0.8);
     }
     img {
@@ -322,8 +322,6 @@ button {
 
   .services-for-workers {
     h2 {
-      margin-left: 1rem;
-      margin-right: 1rem;
       text-align: center;
     }
     .info-container-services {
@@ -339,7 +337,6 @@ button {
           }
         }
         .labour-and-negotiations-container > * {
-          margin-left: 2rem;
           flex-basis: 50rem;
         }
       }
