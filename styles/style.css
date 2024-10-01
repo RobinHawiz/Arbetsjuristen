@@ -1262,4 +1262,48 @@ button:hover .border-line.bottom-right-horizontal {
   .services-wrapper .services-container .read-more.overall-labour-law {
     width: 17.5rem;
   }
+}
+.employees-page {
+  min-height: 100vh;
+  background: #2f303a; /* fallback */
+  background-image: url("../img/ArbetsgivarePage.jpg"); /* fallback */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../img/ArbetstagarePage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.introduction.employee .introduction-container .read-more-1 {
+  margin-top: 3rem;
+  width: 43.5rem;
+}
+.introduction.employee .introduction-container .read-more-2 {
+  margin-top: 1rem;
+  margin-bottom: 0rem;
+  width: 23.5rem;
+}
+.introduction.employee .introduction-container .read-more-3 {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  width: 36rem;
+}
+
+@media screen and (max-width: 800px) {
+  .employees-page .info-container h2 {
+    text-align: center;
+  }
+  .employees-page .info-container .text-wrapper {
+    text-align: center;
+    width: 90%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+  }
+  .introduction.employee .introduction-container .read-more-1 {
+    margin-top: 3rem;
+    width: 27.5rem;
+  }
+  .introduction.employee .introduction-container .read-more-3 {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    width: 26rem;
+  }
 }/*# sourceMappingURL=style.css.map */
