@@ -1,0 +1,133 @@
+.contact-page {
+  min-height: 100vh;
+  background: $secondary; /* fallback */
+  background-image: url("/img/Contact.jpg"); /* fallback */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("/img/Contact.jpg");
+  background-size: cover;
+  background-position: center;
+
+  .info-container {
+    margin-top: 10rem;
+    h2 {
+    }
+    h1 {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      a {
+        color: $primary;
+      }
+    }
+    .text-wrapper {
+      text-align: center;
+      width: 100%;
+      p {
+        font-size: $primary-font;
+      }
+    }
+  }
+
+  form {
+    width: 70rem;
+    margin-bottom: 3rem;
+    .input-box-container {
+      @include flex(center, space-between, row);
+      .input-box {
+        position: relative;
+        margin-top: 4rem;
+        input {
+          background: none;
+          border-style: solid;
+          border-width: 0.1rem;
+          border-color: rgba(236, 232, 229, 0.7);
+          height: 4rem;
+          width: 30rem;
+          padding: 0.5rem;
+          font-size: $tertiary-font;
+          color: $primary;
+          font-family: "Mulish", sans-serif;
+
+          &:focus + label,
+          &:valid + label {
+            color: $primary;
+            transform: translateY(-200%);
+            font-size: $tertiary-font;
+          }
+          &:focus {
+            outline: none;
+            border-color: $primary;
+          }
+        }
+        label {
+          transition: all ease 0.3s;
+          top: 50%;
+          left: 0.5rem;
+          transform: translateY(-50%);
+          position: absolute;
+          color: rgba(236, 232, 229, 0.7);
+          font-size: $secondary-font;
+          pointer-events: none;
+        }
+      }
+      .message-box {
+        position: relative;
+        width: 70rem;
+        textarea {
+          height: 10rem;
+          width: 100%;
+          background: none;
+          border-style: solid;
+          border-width: 0.1rem;
+          border-color: rgba(236, 232, 229, 0.7);
+          padding: 0.5rem;
+          font-size: $tertiary-font;
+          color: $primary;
+          font-family: "Mulish", sans-serif;
+          resize: none;
+
+          &:focus + label,
+          &:valid + label {
+            color: $primary;
+            transform: translateY(-110%);
+            font-size: $tertiary-font;
+          }
+          &:focus {
+            outline: none;
+            border-color: $primary;
+          }
+        }
+        label {
+          top: 0;
+          transform: translateY(25%);
+        }
+      }
+    }
+
+    button {
+      margin-top: 4rem;
+      float: right;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .contact-page {
+    form {
+      width: 80%;
+
+      .input-box-container {
+        flex-wrap: wrap;
+        .input-box {
+          width: 100%;
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

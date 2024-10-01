@@ -244,6 +244,13 @@ footer .footer-container ul.socials li:hover a img {
     -o-flex-direction: row;
     flex-direction: row;
   }
+  footer .footer-container .company-information-container .copyright-logo-wrapper {
+    width: 25rem;
+  }
+  footer .footer-container .company-information-container .copyright-logo-wrapper img {
+    height: 100%;
+    width: 100%;
+  }
   footer .footer-container ul.socials {
     margin-top: 1rem;
     margin-bottom: 2rem;
@@ -910,5 +917,130 @@ button:hover .border-line.bottom-right-horizontal {
   }
   .employee-page .information-wrapper .information-container h2 {
     text-align: center;
+  }
+}
+.contact-page {
+  min-height: 100vh;
+  background: #2f303a; /* fallback */
+  background-image: url("/img/Contact.jpg"); /* fallback */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 100%), url("/img/Contact.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.contact-page .info-container {
+  margin-top: 10rem;
+}
+.contact-page .info-container h1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.contact-page .info-container h1 a {
+  color: #ece8e5;
+}
+.contact-page .info-container .text-wrapper {
+  text-align: center;
+  width: 100%;
+}
+.contact-page .info-container .text-wrapper p {
+  font-size: 2.3rem;
+}
+.contact-page form {
+  width: 70rem;
+  margin-bottom: 3rem;
+}
+.contact-page form .input-box-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.contact-page form .input-box-container .input-box {
+  position: relative;
+  margin-top: 4rem;
+}
+.contact-page form .input-box-container .input-box input {
+  background: none;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: rgba(236, 232, 229, 0.7);
+  height: 4rem;
+  width: 30rem;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  color: #ece8e5;
+  font-family: "Mulish", sans-serif;
+}
+.contact-page form .input-box-container .input-box input:focus + label, .contact-page form .input-box-container .input-box input:valid + label {
+  color: #ece8e5;
+  transform: translateY(-200%);
+  font-size: 1.8rem;
+}
+.contact-page form .input-box-container .input-box input:focus {
+  outline: none;
+  border-color: #ece8e5;
+}
+.contact-page form .input-box-container .input-box label {
+  transition: all ease 0.3s;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  position: absolute;
+  color: rgba(236, 232, 229, 0.7);
+  font-size: 2rem;
+  pointer-events: none;
+}
+.contact-page form .input-box-container .message-box {
+  position: relative;
+  width: 70rem;
+}
+.contact-page form .input-box-container .message-box textarea {
+  height: 10rem;
+  width: 100%;
+  background: none;
+  border-style: solid;
+  border-width: 0.1rem;
+  border-color: rgba(236, 232, 229, 0.7);
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  color: #ece8e5;
+  font-family: "Mulish", sans-serif;
+  resize: none;
+}
+.contact-page form .input-box-container .message-box textarea:focus + label, .contact-page form .input-box-container .message-box textarea:valid + label {
+  color: #ece8e5;
+  transform: translateY(-110%);
+  font-size: 1.8rem;
+}
+.contact-page form .input-box-container .message-box textarea:focus {
+  outline: none;
+  border-color: #ece8e5;
+}
+.contact-page form .input-box-container .message-box label {
+  top: 0;
+  transform: translateY(25%);
+}
+.contact-page form button {
+  margin-top: 4rem;
+  float: right;
+}
+
+@media screen and (max-width: 800px) {
+  .contact-page form {
+    width: 80%;
+  }
+  .contact-page form .input-box-container {
+    flex-wrap: wrap;
+  }
+  .contact-page form .input-box-container .input-box {
+    width: 100%;
+  }
+  .contact-page form .input-box-container .input-box input {
+    width: 100%;
   }
 }/*# sourceMappingURL=style.css.map */
