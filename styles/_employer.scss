@@ -1,0 +1,208 @@
+.employer-page {
+  min-height: 100vh;
+  background: $secondary; /* fallback */
+  background-image: url("../img/ArbetsgivarePage.jpg"); /* fallback */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    ),
+    url("../img/ArbetsgivarePage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.introduction {
+  min-height: 50vh;
+  background: $secondary;
+  @include flex(center, center, column);
+  .introduction-container {
+    width: 100rem;
+    h2 {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    p {
+      font-size: $secondary-font;
+      font-weight: 400;
+    }
+    .read-more-1 {
+      margin-top: 3rem;
+      width: 32rem;
+    }
+    .read-more-2 {
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+      width: 31rem;
+    }
+    .read-more {
+      a {
+        @include flex(center, space-between, row);
+        p {
+          font-size: $tertiary-font;
+          font-weight: 700;
+          color: $link;
+        }
+
+        img {
+          transition: all ease 0.3s;
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+
+        &:hover {
+          img {
+            transform: translate(1rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+.services-page {
+  min-height: 50vh;
+  background: $secondary;
+  @include flex(normal, normal, row);
+}
+
+.services-wrapper {
+  width: 100%;
+  @include flex(center, center, column);
+  .services-container {
+    width: calc(30rem + 20vw);
+    h2 {
+      align-self: flex-start;
+      margin-top: 3rem;
+      margin-bottom: 4rem;
+    }
+    p {
+      font-size: $secondary-font;
+      font-weight: 400;
+    }
+    .read-more.negotiations {
+      width: 22rem;
+    }
+    .read-more.overall-labour-law {
+      width: 26.5rem;
+    }
+    .read-more {
+      margin-top: 3rem;
+      align-self: flex-start;
+      width: 20.5rem;
+      a {
+        @include flex(center, space-between, row);
+        p {
+          font-size: $tertiary-font;
+          font-weight: 700;
+          color: $link;
+        }
+
+        img {
+          transition: all ease 0.3s;
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+
+        &:hover {
+          img {
+            transform: translate(1rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  .text-wrapper {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3.5rem;
+    background: rgb(47, 48, 58, 0.8);
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .introduction {
+    .introduction-container {
+      width: 70rem;
+    }
+  }
+  .services-wrapper {
+    .services-container {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      h2 {
+        display: none;
+      }
+    }
+  }
+  .labour-law {
+    flex-wrap: wrap-reverse;
+  }
+
+  .negotiations {
+    flex-wrap: wrap;
+  }
+
+  .overall-labour-law {
+    flex-wrap: wrap-reverse;
+  }
+
+  .image-wrapper {
+    height: 35vh;
+    .text-wrapper {
+      display: block;
+    }
+    img.overall-labour-law {
+      object-position: 50% 10%;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .employer-page {
+    .info-container {
+      h2 {
+        text-align: center;
+      }
+      .text-wrapper {
+        text-align: center;
+        width: 90%;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+  .introduction {
+    .introduction-container {
+      width: 90%;
+      .read-more {
+        width: 24rem;
+      }
+    }
+  }
+
+  .services-wrapper {
+    .services-container {
+      width: 90%;
+
+      .read-more.overall-labour-law {
+        width: 17.5rem;
+      }
+    }
+  }
+}
