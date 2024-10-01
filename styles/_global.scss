@@ -206,6 +206,13 @@ footer {
         .contact-info-container {
           @include flex(center, center, row);
         }
+        .copyright-logo-wrapper {
+          width: 25rem;
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
       }
       ul.socials {
         margin-top: 1rem;
