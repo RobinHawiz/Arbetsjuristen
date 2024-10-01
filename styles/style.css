@@ -1306,4 +1306,18 @@ button:hover .border-line.bottom-right-horizontal {
     margin-bottom: 3rem;
     width: 26rem;
   }
+}
+p.help {
+  text-align: center;
+}
+
+button.help {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+button.help .border-line {
+  background: #688bf5;
+}
+button.help p {
+  color: #688bf5;
 }/*# sourceMappingURL=style.css.map */
