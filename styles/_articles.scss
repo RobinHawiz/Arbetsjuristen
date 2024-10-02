@@ -119,6 +119,72 @@
   }
 }
 
+.article-page {
+  min-height: 100vh;
+  background: $secondary; /* fallback */
+  background-image: url("../img/Article.jpg"); /* fallback */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/Article.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.introduction.introduction-article {
+  background: linear-gradient(
+    to bottom,
+    rgba(33, 34, 41, 1) 0%,
+    rgba(47, 48, 58, 1) 100%
+  );
+  @include flex(normal, space-between, row);
+  .introduction-container.introduction-container-article {
+    margin: auto;
+    margin-bottom: 10rem;
+    h2 {
+      text-align: start;
+      margin-left: 3rem;
+    }
+    p {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+  }
+}
+
+aside {
+  padding-top: 10rem;
+  height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: $secondary;
+  h2 {
+    text-align: center;
+  }
+  p {
+    margin-top: 5rem;
+    margin-right: 4rem;
+    margin-left: 5rem;
+    position: relative;
+    font-size: $secondary-font;
+
+    a {
+      color: $primary;
+    }
+    img {
+      position: absolute;
+      top: 50%;
+      left: -1rem;
+      transform: translate(-100%, -48%);
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .article-box-container {
     @include flex(center, center, row);
@@ -132,7 +198,8 @@
 
 @media screen and (max-width: 800px) {
   .info-container {
-    h2 {
+    h1 {
+      font-size: $h2-font;
       text-align: center;
     }
     .articles-text-wrapper {
@@ -153,5 +220,22 @@
       height: 23rem;
       padding-right: 1rem;
     }
+  }
+
+  .introduction.introduction-article {
+    .introduction-container.introduction-container-article {
+      h2 {
+        margin-left: 0;
+        text-align: center;
+        word-wrap: break-word;
+      }
+      p {
+        word-wrap: break-word;
+      }
+    }
+  }
+
+  aside {
+    display: none;
   }
 }
