@@ -1,0 +1,157 @@
+.articles-page {
+  min-height: 100vh;
+  background: $secondary; /* fallback */
+  background-image: url("../img/Articles.jpg"); /* fallback */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url("../img/Articles.jpg");
+  background-size: cover;
+  background-position: center;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+}
+
+.info-container {
+  .articles-text-wrapper {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    p {
+      font-size: $secondary-font;
+    }
+  }
+
+  .search-box {
+    position: relative;
+    margin-top: 4rem;
+    input {
+      background: none;
+      border-style: solid;
+      border-width: 0.1rem;
+      border-color: rgba(236, 232, 229, 0.7);
+      height: 4rem;
+      width: 50rem;
+      padding: 0.5rem;
+      font-size: $tertiary-font;
+      color: $primary;
+      font-family: "Mulish", sans-serif;
+      font-weight: 400;
+
+      &:focus + label,
+      &:valid + label {
+        color: $primary;
+        transform: translateY(-200%);
+        font-size: $tertiary-font;
+      }
+      &:focus {
+        outline: none;
+        border-color: $primary;
+      }
+    }
+    label {
+      transition: all ease 0.3s;
+      top: 50%;
+      left: 0.5rem;
+      transform: translateY(-50%);
+      position: absolute;
+      color: rgba(236, 232, 229, 0.7);
+      font-size: $secondary-font;
+      pointer-events: none;
+    }
+  }
+  img {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+.article-box-container {
+  @include flex(center, space-between, row);
+  width: 90rem;
+  flex-wrap: wrap;
+  .article-box {
+    @include flex(normal, space-between, column);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 4rem 5.5rem 4rem 3rem;
+    width: 40rem;
+    height: 20rem;
+    background: rgba(47, 48, 58, 0.6);
+
+    p.label {
+      padding: 0.4rem;
+      font-size: 1.5rem;
+      color: $secondary;
+      background: $primary;
+      align-self: flex-start;
+      border-radius: 0.3rem;
+    }
+    p.title {
+      font-size: $secondary-font;
+    }
+    .read-more {
+      width: 10rem;
+      a {
+        @include flex(center, space-between, row);
+        p {
+          font-size: $tertiary-font;
+          color: $link;
+        }
+
+        img {
+          transition: all ease 0.3s;
+          width: 2.4rem;
+          height: 2.4rem;
+        }
+
+        &:hover {
+          img {
+            transform: translate(1rem);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .article-box-container {
+    @include flex(center, center, row);
+    width: 90%;
+    .article-box {
+      margin-left: 2rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .info-container {
+    h2 {
+      text-align: center;
+    }
+    .articles-text-wrapper {
+      text-align: center;
+      width: 90%;
+    }
+
+    .search-box {
+      width: 80%;
+      input {
+        width: 100%;
+      }
+    }
+  }
+
+  .article-box-container {
+    .article-box {
+      height: 23rem;
+      padding-right: 1rem;
+    }
+  }
+}
