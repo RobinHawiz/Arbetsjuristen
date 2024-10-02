@@ -1202,11 +1202,11 @@ button:hover .border-line.bottom-right-horizontal {
   transform: translate(1rem);
 }
 
-.image-wrapper {
+.img-wrapper {
   position: relative;
   width: 100%;
 }
-.image-wrapper .text-wrapper {
+.img-wrapper .text-wrapper {
   display: none;
   position: absolute;
   top: 50%;
@@ -1215,7 +1215,7 @@ button:hover .border-line.bottom-right-horizontal {
   padding: 3.5rem;
   background: rgba(47, 48, 58, 0.8);
 }
-.image-wrapper img {
+.img-wrapper img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -1243,13 +1243,13 @@ button:hover .border-line.bottom-right-horizontal {
   .overall-labour-law {
     flex-wrap: wrap-reverse;
   }
-  .image-wrapper {
+  .img-wrapper {
     height: 35vh;
   }
-  .image-wrapper .text-wrapper {
+  .img-wrapper .text-wrapper {
     display: block;
   }
-  .image-wrapper img.overall-labour-law {
+  .img-wrapper img.overall-labour-law {
     -o-object-position: 50% 10%;
        object-position: 50% 10%;
   }
