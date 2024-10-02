@@ -12,6 +12,10 @@
   background-position: center;
 }
 
+.page-content {
+  @include flex(center, center, column);
+}
+
 .info-container {
   min-height: 82vh;
   width: 100%;
