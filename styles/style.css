@@ -9,6 +9,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -1468,6 +1469,71 @@ button.help p {
   transform: translate(1rem);
 }
 
+.article-page {
+  min-height: 100vh;
+  background: #2f303a; /* fallback */
+  background-image: url("../img/Article.jpg"); /* fallback */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%), url("../img/Article.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.introduction.introduction-article {
+  background: linear-gradient(to bottom, rgb(33, 34, 41) 0%, rgb(47, 48, 58) 100%); /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
+  display: flex;
+  -moz-align-items: normal;
+  -ms-align-items: normal;
+  align-items: normal;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -moz-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+}
+.introduction.introduction-article .introduction-container.introduction-container-article {
+  margin: auto;
+  margin-bottom: 10rem;
+}
+.introduction.introduction-article .introduction-container.introduction-container-article h2 {
+  text-align: start;
+  margin-left: 3rem;
+}
+.introduction.introduction-article .introduction-container.introduction-container-article p {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+aside {
+  padding-top: 10rem;
+  height: 100vh;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background: #2f303a;
+}
+aside h2 {
+  text-align: center;
+}
+aside p {
+  margin-top: 5rem;
+  margin-right: 4rem;
+  margin-left: 5rem;
+  position: relative;
+  font-size: 2rem;
+}
+aside p a {
+  color: #ece8e5;
+}
+aside p img {
+  position: absolute;
+  top: 50%;
+  left: -1rem;
+  transform: translate(-100%, -48%);
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
 @media screen and (max-width: 1024px) {
   .article-box-container { /* Chrome 4-20, Safari 3.1-6, Safari på iOS 3.2-6.1, Androids web browser 2.1-4.3 */ /* Firefox 2-21 */ /* Internet explorer 10 */ /* Chrome 21-28, Safari 6.1-8, Opera 15-16, Safari on iOS 7-8.4 */
     display: flex;
@@ -1488,7 +1554,8 @@ button.help p {
   }
 }
 @media screen and (max-width: 800px) {
-  .info-container h2 {
+  .info-container h1 {
+    font-size: 3rem;
     text-align: center;
   }
   .info-container .articles-text-wrapper {
@@ -1504,5 +1571,16 @@ button.help p {
   .article-box-container .article-box {
     height: 23rem;
     padding-right: 1rem;
+  }
+  .introduction.introduction-article .introduction-container.introduction-container-article h2 {
+    margin-left: 0;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .introduction.introduction-article .introduction-container.introduction-container-article p {
+    word-wrap: break-word;
+  }
+  aside {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
