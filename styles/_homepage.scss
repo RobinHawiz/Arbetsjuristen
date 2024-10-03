@@ -155,7 +155,7 @@ button {
     position: relative;
     min-height: 70vh;
     width: 100%;
-    .services-wrapper {
+    .service-wrapper {
       display: none;
       position: absolute;
       top: 50%;
@@ -237,7 +237,7 @@ button {
     position: relative;
     min-height: 120vh;
     width: 100%;
-    .services-wrapper {
+    .service-wrapper {
       display: none;
       position: absolute;
       top: 50%;
@@ -269,8 +269,9 @@ button {
       /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 70vh. */
       min-height: 40vh;
       height: 40vh;
-      .services-wrapper {
+      .service-wrapper {
         display: block;
+        text-align: center;
       }
       img {
         object-fit: cover;
@@ -295,8 +296,9 @@ button {
       /* For some reason you have to set both a min-height and height to 40vh to override the previous min-height of 120vh. */
       min-height: 40vh;
       height: 40vh;
-      .services-wrapper {
+      .service-wrapper {
         display: block;
+        text-align: center;
       }
       img {
         object-fit: cover;
@@ -308,9 +310,6 @@ button {
 @media screen and (max-width: 800px) {
   .homepage {
     .info-container {
-      h2 {
-        text-align: center;
-      }
       .text-wrapper {
         text-align: center;
         width: 90%;

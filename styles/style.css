@@ -467,7 +467,7 @@ button:hover .border-line.bottom-right-horizontal {
   min-height: 70vh;
   width: 100%;
 }
-.services-for-workers .image-wrapper-worker .services-wrapper {
+.services-for-workers .image-wrapper-worker .service-wrapper {
   display: none;
   position: absolute;
   top: 50%;
@@ -580,7 +580,7 @@ button:hover .border-line.bottom-right-horizontal {
   min-height: 120vh;
   width: 100%;
 }
-.services-for-employers .image-wrapper-employer .services-wrapper {
+.services-for-employers .image-wrapper-employer .service-wrapper {
   display: none;
   position: absolute;
   top: 50%;
@@ -613,8 +613,9 @@ button:hover .border-line.bottom-right-horizontal {
     min-height: 40vh;
     height: 40vh;
   }
-  .services-for-workers .image-wrapper-worker .services-wrapper {
+  .services-for-workers .image-wrapper-worker .service-wrapper {
     display: block;
+    text-align: center;
   }
   .services-for-workers .image-wrapper-worker img {
     -o-object-fit: cover;
@@ -640,8 +641,9 @@ button:hover .border-line.bottom-right-horizontal {
     min-height: 40vh;
     height: 40vh;
   }
-  .services-for-employers .image-wrapper-employer .services-wrapper {
+  .services-for-employers .image-wrapper-employer .service-wrapper {
     display: block;
+    text-align: center;
   }
   .services-for-employers .image-wrapper-employer img {
     -o-object-fit: cover;
@@ -649,9 +651,6 @@ button:hover .border-line.bottom-right-horizontal {
   }
 }
 @media screen and (max-width: 800px) {
-  .homepage .info-container h2 {
-    text-align: center;
-  }
   .homepage .info-container .text-wrapper {
     text-align: center;
     width: 90%;
