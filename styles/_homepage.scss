@@ -310,6 +310,9 @@ button {
 @media screen and (max-width: 800px) {
   .homepage {
     .info-container {
+      h2{
+        text-align: center;
+      }
       .text-wrapper {
         text-align: center;
         width: 90%;
