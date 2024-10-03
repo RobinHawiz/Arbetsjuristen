@@ -38,11 +38,82 @@ p {
   color: #ece8e5;
 }
 
+a.button,
+button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15rem;
+  height: 5rem;
+}
+a.button .border-line,
+button .border-line {
+  position: absolute;
+  background: #ece8e5;
+  transition: all ease 0.3s;
+}
+a.button .border-line.top-right-vertical,
+button .border-line.top-right-vertical {
+  top: 0;
+  left: 0;
+  width: 0.2rem;
+  height: 2rem;
+}
+a.button .border-line.top-right-horizontal,
+button .border-line.top-right-horizontal {
+  top: 0;
+  left: 0;
+  width: 2rem;
+  height: 0.2rem;
+}
+a.button .border-line.bottom-right-vertical,
+button .border-line.bottom-right-vertical {
+  bottom: 0;
+  right: 0;
+  width: 0.2rem;
+  height: 2rem;
+}
+a.button .border-line.bottom-right-horizontal,
+button .border-line.bottom-right-horizontal {
+  bottom: 0;
+  right: 0;
+  width: 2rem;
+  height: 0.2rem;
+}
+a.button p,
 button p {
+  text-align: center;
+  transform: translateY(50%);
+  font-size: 1.8rem;
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
+}
+a.button:hover .border-line.top-right-vertical,
+button:hover .border-line.top-right-vertical {
+  width: 0.2rem;
+  height: 5rem;
+}
+a.button:hover .border-line.top-right-horizontal,
+button:hover .border-line.top-right-horizontal {
+  width: 15rem;
+  height: 0.2rem;
+}
+a.button:hover .border-line.bottom-right-vertical,
+button:hover .border-line.bottom-right-vertical {
+  width: 0.2rem;
+  height: 5rem;
+}
+a.button:hover .border-line.bottom-right-horizontal,
+button:hover .border-line.bottom-right-horizontal {
+  width: 15rem;
+  height: 0.2rem;
+}
+
+button p {
+  transform: translate(0);
 }
 
 nav {
@@ -314,66 +385,6 @@ footer .footer-container ul.socials li:hover a img {
 .info-container .text-wrapper p {
   line-height: 2.7rem;
   font-size: 2rem;
-}
-
-button {
-  position: relative;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 15rem;
-  height: 5rem;
-}
-button .border-line {
-  position: absolute;
-  background: #ece8e5;
-  transition: all ease 0.3s;
-}
-button .border-line.top-right-vertical {
-  top: 0;
-  width: 0.2rem;
-  height: 2rem;
-}
-button .border-line.top-right-horizontal {
-  top: 0;
-  width: 2rem;
-  height: 0.2rem;
-}
-button .border-line.bottom-right-vertical {
-  bottom: 0;
-  right: 0;
-  width: 0.2rem;
-  height: 2rem;
-}
-button .border-line.bottom-right-horizontal {
-  bottom: 0;
-  right: 0;
-  width: 2rem;
-  height: 0.2rem;
-}
-button p {
-  font-size: 1.8rem;
-}
-button:hover .border-line.top-right-vertical {
-  width: 0.2rem;
-  height: 5rem;
-}
-button:hover .border-line.top-right-horizontal {
-  top: 0;
-  width: 15rem;
-  height: 0.2rem;
-}
-button:hover .border-line.bottom-right-vertical {
-  bottom: 0;
-  right: 0;
-  width: 0.2rem;
-  height: 5rem;
-}
-button:hover .border-line.bottom-right-horizontal {
-  bottom: 0;
-  right: 0;
-  width: 15rem;
-  height: 0.2rem;
 }
 
 /* ---------------------------services-for-workers--------------------------- */
@@ -1342,14 +1353,14 @@ p.help {
   text-align: center;
 }
 
-button.help {
+a.button.help {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
-button.help .border-line {
+a.button.help .border-line {
   background: #688bf5;
 }
-button.help p {
+a.button.help p {
   color: #688bf5;
 }
 

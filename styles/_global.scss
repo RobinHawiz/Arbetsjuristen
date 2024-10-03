@@ -74,12 +74,81 @@ p {
   color: $primary;
 }
 
+a.button,
 button {
+  position: relative;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 15rem;
+  height: 5rem;
+
+  .border-line {
+    position: absolute;
+    background: $primary;
+    transition: all ease 0.3s;
+  }
+
+  .border-line.top-right-vertical {
+    top: 0;
+    left: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.top-right-horizontal {
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
+  .border-line.bottom-right-vertical {
+    bottom: 0;
+    right: 0;
+    width: 0.2rem;
+    height: 2rem;
+  }
+  .border-line.bottom-right-horizontal {
+    bottom: 0;
+    right: 0;
+    width: 2rem;
+    height: 0.2rem;
+  }
+
   p {
+    text-align: center;
+    transform: translateY(50%);
+    font-size: $tertiary-font;
     font-family: "Mulish", sans-serif;
     font-optical-sizing: auto;
     font-weight: bold;
     font-style: normal;
+  }
+
+  &:hover {
+    .border-line.top-right-vertical {
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.top-right-horizontal {
+      width: 15rem;
+      height: 0.2rem;
+    }
+
+    .border-line.bottom-right-vertical {
+      width: 0.2rem;
+      height: 5rem;
+    }
+    .border-line.bottom-right-horizontal {
+      width: 15rem;
+      height: 0.2rem;
+    }
+  }
+}
+
+button {
+  p {
+    transform: translate(0);
   }
 }
 
