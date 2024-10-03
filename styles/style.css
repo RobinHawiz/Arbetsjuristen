@@ -14,7 +14,6 @@ html {
 
 body {
   font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
 }
@@ -87,7 +86,6 @@ button p {
   transform: translateY(50%);
   font-size: 1.8rem;
   font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
 }
