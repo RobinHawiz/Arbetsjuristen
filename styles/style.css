@@ -651,6 +651,9 @@ button:hover .border-line.bottom-right-horizontal {
   }
 }
 @media screen and (max-width: 800px) {
+  .homepage .info-container h2 {
+    text-align: center;
+  }
   .homepage .info-container .text-wrapper {
     text-align: center;
     width: 90%;
