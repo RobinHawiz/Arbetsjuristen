@@ -91,6 +91,10 @@ nav {
   -webkit-box-orient: horizontal; /* Internet explorer 10 (column = vertical, row = horizontal)*/
   .logo {
     flex-grow: 4.5;
+    img {
+      width: 18.7rem;
+      height: 2.7rem;
+    }
   }
   ul {
     flex-grow: 1;
@@ -163,6 +167,12 @@ footer {
               }
             }
           }
+        }
+      }
+      .copyright-logo-wrapper {
+        img {
+          height: 2.7rem;
+          width: 27.8rem;
         }
       }
     }
