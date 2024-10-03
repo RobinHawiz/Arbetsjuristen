@@ -1,13 +1,13 @@
 .contact-page {
   min-height: 100vh;
   background: $secondary; /* fallback */
-  background-image: url("/img/Contact.jpg"); /* fallback */
+  background-image: url("img/Contact.jpg"); /* fallback */
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.75) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url("/img/Contact.jpg");
+    url("img/Contact.jpg");
   background-size: cover;
   background-position: center;
 

@@ -74,6 +74,15 @@ p {
   color: $primary;
 }
 
+button {
+  p {
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+  }
+}
+
 nav {
   width: 90%;
   margin: auto;
